@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            font-family: 'Poppins';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            overflow: hidden;
+            cursor: default;
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(image/bg2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 50px;
+            backdrop-filter: blur(250px);
+            z-index: -2;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .box{
+            transform-style: preserve-3d;
+            transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+            animation: animate 25s linear infinite;
+        }
+
+        @keyframes animate{
+            0%
+            {
+                transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+            }
+            100%
+            {
+                transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+            }
+        }
+
+        .container .box span{
+            position: absolute;
+            color: rgb(222, 222, 222);
+            font-size: 3.5em;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-weight: 900;
+            padding: 0 10px;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.6), transparent);
+            line-height: 0.76em;
+            transform-style: preserve-3d;
+            text-shadow: 500px 600px 5px rgba(200, 200, 200, 0.4),
+            300px 550px 0 rgba(212, 212, 212, 0.4),
+            150px 400px 10px rgba(225, 225, 225, 0.4),
+            -150px 400px 0 rgba(212, 212, 212, 0.4),
+            -300px 550px 10px rgba(200, 200, 200, 0.4),
+            -500px 600px 5px rgba(212, 212, 212, 0.4);
+            transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(106px);
+        }
+
+        .container .box span i:nth-child(1){
+            font-style: initial;
+            color: #ff246f;
+        }
+
+        .container .box span i:nth-child(2){
+            font-style: initial;
+            color: #00d2ff;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="box" id="circle">
+                <span style="--i:1;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:2;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:3;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:4;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:5;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:6;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:7;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:8;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:9;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:10;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:11;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:12;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:13;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:14;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:15;"><i>S</i>port <i>S</i>hop</span>
+                <span style="--i:16;"><i>S</i>port <i>S</i>hop</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
